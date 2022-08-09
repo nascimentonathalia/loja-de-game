@@ -39,7 +39,7 @@ public class CategoriaController {
 		
 	}
 	
-	@GetMapping("/classe{classe}")
+	@GetMapping("/classe/{classe}")
 	private ResponseEntity<List<CategoriaModel>>getByClasse(@PathVariable String classe){
 		return ResponseEntity.ok(repository.findAllByClasseContainingIgnoreCase(classe));
 	}
